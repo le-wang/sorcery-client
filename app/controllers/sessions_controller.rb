@@ -3,7 +3,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = login(params[:email], params[:password], params[:remember_me])
+    user = Auth::User.login(params[:email], params[:password])
+    auto_login(user) if user
     if user
       redirect_back_or_to root_url, :notice => "Logged in!"
     else

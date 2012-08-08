@@ -38,3 +38,5 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem 'sorcery'
+gem 'rest-client'
+gem 'oj'

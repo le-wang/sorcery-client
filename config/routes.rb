@@ -1,5 +1,5 @@
 Auth::Application.routes.draw do
-  root :to => "users#index"
+  root :to => "welcome#index"
 
   get "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => "login"
